@@ -211,7 +211,7 @@ button:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(assets/img/backs/backblack.png);
+    background-image: url(https://raw.githubusercontent.com/csssantos/king/main/eeletro/assets/img/backs/backblack.png);
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -243,36 +243,36 @@ button:hover {
   }
 
   .categorys .category i[name='bestseller'] {
-    background-image: url('assets/img/icons/bestseller.png');
+    background-image: url('https://raw.githubusercontent.com/csssantos/king/main/eeletro/assets/img/icons/bestseller.png');
   }
 
 
   .categorys .category i[name='blender'] {
-    background-image: url('assets/img/icons/blender.png');
+    background-image: url('https://raw.githubusercontent.com/csssantos/king/main/eeletro/assets/img/icons/blender.png');
   }
 
   .categorys .category i[name='microwave'] {
-    background-image: url('assets/img/icons/microwave.png');
+    background-image: url('https://raw.githubusercontent.com/csssantos/king/main/eeletro/assets/img/icons/microwave.png');
   }
 
   .categorys .category i[name='refrigerator'] {
-    background-image: url('assets/img/icons/refrigerator.png');
+    background-image: url('https://raw.githubusercontent.com/csssantos/king/main/eeletro/assets/img/icons/refrigerator.png');
   }
 
   .categorys .category i[name='washingmachine'] {
-    background-image: url('assets/img/icons/washingmachine.png');
+    background-image: url('https://raw.githubusercontent.com/csssantos/king/main/eeletro/assets/img/icons/washingmachine.png');
   }
 
   .categorys .category i[name='iron'] {
-    background-image: url('assets/img/icons/iron.png');
+    background-image: url('https://raw.githubusercontent.com/csssantos/king/main/eeletro/assets/img/icons/iron.png');
   }
   
   .categorys .category i[name='fan'] {
-    background-image: url('assets/img/icons/fan.png');
+    background-image: url('https://raw.githubusercontent.com/csssantos/king/main/eeletro/assets/img/icons/fan.png');
   }
 
   .categorys .category i[name='airconditioner'] {
-    background-image: url('assets/img/icons/airconditioner.png');
+    background-image: url('https://raw.githubusercontent.com/csssantos/king/main/eeletro/assets/img/icons/airconditioner.png');
   }
   .categorys .category p {
     font-size: 12px;
