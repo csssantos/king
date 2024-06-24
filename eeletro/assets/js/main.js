@@ -243,9 +243,8 @@ var fogoes = [
                 moveCarousel();
             }
         });
-        if(totalProducts >= 5){
-            updateButtons();
-        }
+        updateButtons();
+        
     });
 
 });
