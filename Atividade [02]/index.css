@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-primary: #f9e106;
+    --color-secondary: #000000; 
+    --color-accent: #ffffff; 
+
+    --color-primary-light: #ffea70;
+    --color-primary-dark: #c7ae00;
+
+    --color-secondary-light: #4d4d4d;
+    --color-secondary-dark: #000000;
+
+    --color-accent-light: #ffffff;
+    --color-accent-dark: #cccccc;
+}
+
+*{
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding: 0 2rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-secondary-light);
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('vetorv2.png');
+}
+
+.card-form {
+    width: 450px;
+    background-color: var(--color-accent-dark);
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 13px 0px rgba(249, 225, 6, 0.2);
+}
+
+.card-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.card-form form .input-group {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.card-form form .input-group input,
+.card-form form .input-group textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 40px;
+    border-radius: 5px;
+    resize: none;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.089);
+    font-weight: 600;
+}
+
+
+.card-form form .input-group i {
+    position: absolute;
+    left: 13px;
+    color: var(--color-primary-dark);
+}
+
+.card-form form textarea {
+    height: 100px;
+}
+
+.card-form form textarea::placeholder,
+.card-form form input::placeholder {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.card-form form button {
+    width: 100%;
+    background-color: var(--color-primary-dark);
+    border: none;
+    outline: none;
+    color: white;
+    margin: 5px 0;
+    font-weight: bold;
+    padding: 5px 0;
+    border-radius: 5px;
+    border-bottom: 2px solid var(--color-primary-light);
+    border-right: 2px solid var(--color-primary-light);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.089);
+    cursor: pointer;
+}
