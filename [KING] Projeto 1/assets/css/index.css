@@ -41,7 +41,7 @@ body {
 .menu-top .logo {
     width: 100px;
     height: 100%;
-    background-image: url('assets/img/kinglogo.webp');
+    background-image: url('/assets/img/kinglogo.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -87,8 +87,8 @@ body {
 .presentation {
     width: 100%;
     height: 80vh;
-    min-height: 600px;
-    max-height: 700px;
+    min-height: 450px;
+    max-height: 550px;
 }
 
 .presentation .information {
@@ -153,19 +153,12 @@ body {
 }
 
 .presentation .image-people {
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/img/people.webp');
-    background-position: center;
-}
-
-.presentation .image-people {
     width: 80%;
     height: 80%;
-    background-image: url('assets/img/siteking.webp');
+    background-image: url('/assets/img/siteking.webp');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .my-works {
@@ -375,7 +368,7 @@ body {
 .resume .experties .experties-item .experties-nivel .nivel::after {
     width: 50px;
     height: 25px;
-    background: #8a2be2;
+    background: var(--primary-color-2);
     top: 10px;
     right: -10px;
     position: absolute;
@@ -386,4 +379,185 @@ body {
     font-size: 11px;
     font-weight: bold;
     content: attr(data-nivel)" %";
+}
+
+.resume .services {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.resume .services .service{
+    min-width: 350px;
+    height: 100px;
+    flex: 3 1;
+    border: 2px dashed rgba(var(--primary-color-2-rgb), 0.5);
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.resume .services .service .icon {
+    min-inline-size: 65px;
+    height: 65px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s ease-in-out;
+    filter: invert(100%) sepia(0%) saturate(7465%) hue-rotate(12deg) brightness(94%) contrast(115%);
+}
+
+.resume .services .service .icon.web-design {
+    background-image: url('/assets/img/web-design.png');
+}
+
+.resume .services .service .icon.graphic-design {
+    background-image: url('/assets/img/graphic-design.png');
+}
+
+
+.resume .services .service:hover .icon {
+    filter: invert(19%) sepia(84%) saturate(3848%) hue-rotate(263deg) brightness(83%) contrast(110%);
+}
+
+.resume .services .service i {
+    font-size: 65px;
+    transition: 0.2s ease-in-out;
+    color: var(--white-color);
+}
+
+.resume .services .service:hover i {
+    color: var(--primary-color-2-dark);
+}
+
+.resume .services .service .info p.title {
+    font-size: 18px;
+    color: var(--white-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.resume .services .service .info p.description {
+    font-size: 12px;
+    color: var(--white-color-dark);
+    margin-bottom: 0;
+    line-height: 15px;
+}
+
+.resume .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.resume .contacts .contact {
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 3 1;
+}
+
+.resume .contacts .contact .back-i {
+    width: 80px;
+    height: 80px;
+    background-image: url(/assets/img/pentagono.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.resume .contacts .contact .back-i i{
+    font-size: 25px;
+    color: white;
+}
+
+.resume .contacts .contact p {
+    font-size: 20px;
+    color: var(--white-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.resume .contacts .contact a {
+    color: var(--white-color-dark);
+}
+
+.about-me {
+    min-width: 200px;
+    width: 50%;
+    height: 100px;
+    background-color: var(--primary-color-1);
+    border-radius: 50px;
+    margin-bottom: 65px;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    transition: width 0.5s ease-in-out;
+}
+
+.about-me div.sep {
+    width: 2px;
+    height: 100%;
+    background-color: rgba(var(--white-color-rgb), 0.2);
+}
+
+.about-me .info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.about-me .info .icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color-2-dark);
+    border-radius: 50%;
+
+}
+
+.about-me .info .icon .i {
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: invert(100%) sepia(0%) saturate(7465%) hue-rotate(12deg) brightness(94%) contrast(115%);
+}
+
+.about-me .info .icon .i.support {
+    background-image: url('/assets/img/support.png');
+}
+
+.about-me .info .icon .i.projects {
+    background-image: url('/assets/img/projects.png');
+}
+
+
+.about-me .info p.title {
+    font-size: 20px;
+    color: var(--white-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: -5px;
+}
+
+.about-me .info p.description {
+    font-size: 12px;
+    color: var(--primary-color-2-light);
+    margin-bottom: 0;
+    text-transform: uppercase;
 }
