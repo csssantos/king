@@ -41,7 +41,7 @@ body {
 .menu-top .logo {
     width: 100px;
     height: 100%;
-    background-image: url('/assets/img/kinglogo.webp');
+    background-image: url('/king/assets/img/kinglogo.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -155,7 +155,7 @@ body {
 .presentation .image-people {
     width: 80%;
     height: 80%;
-    background-image: url('/assets/img/siteking.webp');
+    background-image: url('/king/assets/img/siteking.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -412,11 +412,11 @@ body {
 }
 
 .resume .services .service .icon.web-design {
-    background-image: url('/assets/img/web-design.png');
+    background-image: url('/king/assets/img/web-design.png');
 }
 
 .resume .services .service .icon.graphic-design {
-    background-image: url('/assets/img/graphic-design.png');
+    background-image: url('/king/assets/img/graphic-design.png');
 }
 
 
@@ -467,7 +467,7 @@ body {
 .resume .contacts .contact .back-i {
     width: 80px;
     height: 80px;
-    background-image: url(/assets/img/pentagono.png);
+    background-image: url(/king/assets/img/pentagono.png);
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
@@ -539,11 +539,11 @@ body {
 }
 
 .about-me .info .icon .i.support {
-    background-image: url('/assets/img/support.png');
+    background-image: url('/king/assets/img/support.png');
 }
 
 .about-me .info .icon .i.projects {
-    background-image: url('/assets/img/projects.png');
+    background-image: url('/king/assets/img/projects.png');
 }
 
 
