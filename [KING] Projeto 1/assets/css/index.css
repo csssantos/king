@@ -28,9 +28,36 @@ body {
     color: var(--white-color-dark);
 }
 
+#back-top {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px dashed var(--primary-color-2-dark);
+    font-size: 30px;
+    color: var(--white-color-light);
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#back-top.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    left: -100px;
+}
+
 .menu-top {
     width: 100%;
     height: 70px;
+    position: sticky;
+    z-index: 99999;
+    background-color: var(--primary-color-1-dark);
+    top: 0;
     border-bottom: 1px solid rgba(var(--white-color-rgb), 0.1);
 }
 
@@ -69,6 +96,7 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    transition: all 0.5s ease-in-out;
 }
 
 .menu-top .menu-items .item a i {
@@ -105,6 +133,10 @@ body {
 
 .presentation p{
     font-size: 13px;
+}
+
+.presentation .btns a {
+    text-decoration: none;
 }
 
 .presentation .btns button {
@@ -271,12 +303,25 @@ body {
     border-radius: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     border: 1px solid var(--primary-color-2-light);
     background-color: var(--primary-color-1-dark);
-    justify-content: center;
     position: relative;
     z-index: 99;
     top: 15px;
+}
+
+.resume .trajectorys .trajectory:first-child .number span::before {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    content: " ";
+    border: 2px dashed rgba(var(--primary-color-2-rgb), 0.5);
+    top: -6px;
+    left: -6px;
+    border-radius: 50%;
+    transform: rotate(6deg);
+    animation: rotate 5s linear infinite;
 }
 
 .resume .trajectorys .trajectory:first-child .number span{
@@ -491,6 +536,27 @@ body {
     color: var(--white-color-dark);
 }
 
+.resume .menu-works {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.resume .menu-works li {
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+}
+
+.resume .menu-works li.active {
+    color: var(--primary-color-2-light);
+}
+
 .about-me {
     min-width: 200px;
     width: 50%;
@@ -560,4 +626,175 @@ body {
     color: var(--primary-color-2-light);
     margin-bottom: 0;
     text-transform: uppercase;
+}
+
+.work-projects {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 110px;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+}
+
+.work-projects .project {
+    min-width: 330px;
+    min-height: 220px;
+    background-color: var(--primary-color-2-light);
+    border-radius: 10px;
+    position: relative;
+    flex: 3 1;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.5s ease-in-out;
+    top: 0;
+}
+
+.work-projects .project:hover {
+    top: -10px;
+}
+
+.work-projects .project:hover::after {
+    top: 10px;
+}
+
+.work-projects .project .project-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 999;
+    border: 3px inset  var(--primary-color-2-dark);
+}
+
+.work-projects .project::before {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 5px var(--primary-color-1-dark);
+    z-index: 99;
+}
+
+.work-projects .project::after {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px dashed var(--primary-color-2-light);
+    transform: rotate(20deg);
+    opacity: 0.4;
+    z-index: 9;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.work-projects .project .overlay-gradient {
+    width: 100%;
+    height: 80px;
+    z-index: 9999;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background: linear-gradient(to top, var(--primary-color-1-dark), rgba(0, 174, 255, 0));
+    padding: 10px 15px;
+}
+
+.work-projects .project .overlay-gradient * {
+    z-index: 99999;
+    margin-bottom: 0;
+} 
+
+.work-projects .project .overlay-gradient p:first-child {
+    font-weight: bold;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+.work-projects .project .overlay-gradient p:not(:first-child) {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 15px;
+    background-color: var(--primary-color-2-light);
+    border-radius: 10px;
+    color: var(--white-color);
+}
+
+footer {
+    width: 100%;
+    padding: 50px 0;
+    color: var(--white-color);
+}
+
+footer .footer-logo {
+    width: 100px;
+    height: 100px;
+    background-image: url('/king/assets/img/kinglogo.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+footer .title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: -5px;
+}
+
+footer .allrights {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+footer .social-media {
+    display: flex;
+    gap: 30px;
+}
+
+footer .social-media a {
+    font-size: 25px;
+    color: var(--white-color);
+    text-decoration: none;
+    background-color: var(--primary-color-2-dark);
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 120px 92px 200px 87px;
+    position: relative;
+}
+
+footer .social-media a::after {
+    width: 120%;
+    height: 120%;
+    content: " ";
+    position: absolute;
+    border-radius: 120px 92px 200px 87px;
+    opacity: 0.5;
+    top: -5px;
+    left: -5px;
+    transform: rotate(60deg);
+    border: 2px dashed var(--primary-color-2-dark);
+}
+
+footer .social-media a i {
+    position: relative;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
